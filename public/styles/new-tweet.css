@@ -15,7 +15,8 @@ label {
 }
 
 #tweet-text {
-  height: 1.2em;
+  height: 1.5em;
+  width: 100%;
   display: flex;
   background-color: transparent;
   outline: none;
@@ -23,7 +24,6 @@ label {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid black;
-  overflow: hidden;
   resize: none;
 }
 
