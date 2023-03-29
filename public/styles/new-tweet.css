@@ -2,15 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 form div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-label {
   font-family: 'Bungee', cursive;
 }
 
@@ -34,4 +32,8 @@ button {
 
 output {
   text-align: right;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
 }
