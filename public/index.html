@@ -48,7 +48,7 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main id="tweets-container">
+    <main>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
@@ -61,26 +61,27 @@
         </form>
         
       </section>
-      <article class="tweet">
-        <header>
-          <div class="author">
-            <span class="name"><i class="fa-solid fa-cat"></i>
-            Alice</span>
-            <span class="tag">@shion</span>
-          </div>
-          <div class="text">53 116 92</div>
-        </header>
-        
-        <footer>
-          <div><strong>10 days ago</strong></div>
-          <div class="icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-
-      </article>
+      <section id="tweets-container">
+        <article class="tweet">
+          <header>
+            <div class="author">
+              <span class="name"><i class="fa-solid fa-cat"></i>
+              Alice</span>
+              <span class="tag">@shion</span>
+            </div>
+            <div class="text">53 116 92</div>
+          </header>
+          
+          <footer>
+            <div><strong>10 days ago</strong></div>
+            <div class="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
   </body>
 </html>

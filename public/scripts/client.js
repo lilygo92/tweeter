@@ -45,10 +45,9 @@ $(() => {
       method: 'GET',
       url: '/tweets',
     }).then((tweets) => {
+      $("#tweets-container").empty();
       renderTweets(tweets);
-    });
-
-    $("tweets-container").empty();
+    });  
   };
 
   fetchTweets();
@@ -76,6 +75,7 @@ $(() => {
     })
     .then((newTweet) => {
       console.log(newTweet);
+      fetchTweets();
     });
 
     event.preventDefault();
