@@ -37,3 +37,12 @@ output {
 .counter {
   font-family: 'Bungee', cursive;
 }
+
+#error {
+  margin: 20px;
+  border: 3px solid red;
+  padding: 15px;
+  color: red;
+  display: none;
+  flex-direction: row;
+}
