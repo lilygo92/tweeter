@@ -5,14 +5,14 @@
  */
 
 $(() => {
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
   const createTweetElement = function(tweet) {
-    const $element = 
+    const $element =
     $(`<article class="tweet">
       <header>
         <div class="author">
@@ -31,10 +31,10 @@ $(() => {
           <i class="fa-solid fa-heart"></i>
         </div>
       </footer>
-    </article>`)
+    </article>`);
     
     return $element;
-  }
+  };
 
   const renderTweets = function(tweets) {
 
@@ -44,7 +44,7 @@ $(() => {
     }
   
     return $('#tweets-container');
-  }
+  };
   
   const fetchTweets = () => {
     $.ajax({
@@ -53,14 +53,14 @@ $(() => {
     }).then((tweets) => {
       $("#tweets-container").empty();
       renderTweets(tweets);
-    });  
+    });
   };
 
 
   fetchTweets();
 
   $("form").submit(function(event) {
-    console.log( "Handler for .submit() called." );
+    console.log("Handler for .submit() called.");
     let input = ($(this).find('#tweet-text').serialize());
 
     console.log(input.length);
@@ -71,7 +71,7 @@ $(() => {
       $(error).css({"display": "flex"});
       $(error).find(".error-text").html("You cannot submit an empty tweet!");
       return;
-    } 
+    }
 
     if (input.length > 145) {
       event.preventDefault();
@@ -88,15 +88,15 @@ $(() => {
       url: 'tweets',
       data: input
     })
-    .then((newTweet) => {
-      console.log(newTweet);
-      fetchTweets();
-    });
+      .then((newTweet) => {
+        console.log(newTweet);
+        fetchTweets();
+      });
 
     event.preventDefault();
-  })
+  });
 
-})
+});
 
 // Test / driver code (temporary)
 

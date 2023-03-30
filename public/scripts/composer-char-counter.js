@@ -12,5 +12,5 @@ $(document).ready(function() {
     $(parent).find("output").html(140 - input.length);
 
 
-  })
+  });
 });
