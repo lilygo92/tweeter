@@ -57,7 +57,17 @@ $(() => {
     console.log( "Handler for .submit() called." );
     let input = ($(this).find('#tweet-text').serialize());
 
-    console.log(input);
+    console.log(input.length);
+
+    if (input.length <= 5) {
+      event.preventDefault();
+      return alert("You cannot submit an empty tweet.");
+    } 
+
+    if (input.length > 145) {
+      event.preventDefault();
+      return alert("Your tweet is too long!");
+    }
 
     $.ajax({
       method: 'POST',
