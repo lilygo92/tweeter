@@ -34,7 +34,7 @@ $(() => {
 
     for (const tweet of tweets) {
       let $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   
     return $('#tweets-container');
@@ -49,6 +49,7 @@ $(() => {
       renderTweets(tweets);
     });  
   };
+
 
   fetchTweets();
 
