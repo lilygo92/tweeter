@@ -23,3 +23,9 @@ nav span {
   color:red;
 }
 
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: #c882cc;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+}

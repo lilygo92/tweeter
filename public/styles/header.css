@@ -9,3 +9,8 @@
   background-color: #c882cc;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
+
+.header img {
+  width: 100%;
+  height: 100%;
+}

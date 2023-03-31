@@ -95,7 +95,6 @@ $(() => {
 
     event.preventDefault();
   });
-
 });
 
 // Test / driver code (temporary)
