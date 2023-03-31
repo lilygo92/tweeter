@@ -57,13 +57,14 @@ $(() => {
   fetchTweets();
 
   // Serialize user input in new tweet form
-  // Check that input has characters and is within the character limit (Add 5 because serialize includes the word "Text:" in front of the input value)
+  // Check that input has characters and is within the character limit
   // If form submission fails, display error message, if submission succeeds hide error message
   // Use ajax to automatically render tweets using fetchTweets, and reset the form and character count
   $("form").submit(function(event) {
     let input = ($(this).find('#tweet-text').serialize());
+    let inputCheck = ($(this).find('#tweet-text').val());
 
-    if (input.length <= 5) {
+    if (inputCheck.length <= 5) {
       event.preventDefault();
       let error = $(this).parent().find("#error");
       $(error).css({"display": "flex"});
@@ -71,7 +72,7 @@ $(() => {
       return;
     }
 
-    if (input.length > 145) {
+    if (inputCheck.length > 145) {
       event.preventDefault();
       let error = $(this).parent().find("#error");
       $(error).css({"display": "flex"});
