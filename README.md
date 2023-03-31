@@ -1,4 +1,4 @@
-# Tweeter Project by Lily Go
+# Tweeter Project
 
 Tweeter is a single page AJAX-based Twitter clone using jQuery, HTML5, and CSS3. 
 
