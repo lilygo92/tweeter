@@ -16,7 +16,7 @@ $(() => {
     $(`<article class="tweet">
       <header>
         <div class="author">
-          <span class="name"><i class="fa-solid fa-cat"></i>
+          <span class="name"><img src=${tweet.user.avatars}></img>
           ${tweet.user.name}</span>
           <span class="tag">${tweet.user.handle}</span>
         </div>

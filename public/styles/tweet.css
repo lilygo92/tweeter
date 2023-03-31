@@ -15,7 +15,13 @@ article.tweet {
   padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   word-wrap: break-word;
+}
+
+.author img {
+  height: 1em;
+  width: 1em;
 }
 
 .text {
