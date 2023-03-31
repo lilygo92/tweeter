@@ -90,6 +90,8 @@ $(() => {
     })
       .then((newTweet) => {
         console.log(newTweet);
+        this.reset();
+        $(this).find("output").html(140);
         fetchTweets();
       });
 
