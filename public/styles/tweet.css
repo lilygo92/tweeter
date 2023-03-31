@@ -9,6 +9,10 @@ article.tweet {
   word-wrap: break-word;
 }
 
+article.tweet:hover {
+  box-shadow: 10px 5px 5px;
+}
+
 .author {
   padding-left: 10px;
   padding-right: 10px;
@@ -57,15 +61,11 @@ article.tweet {
   width: 15%;
 }
 
-article.tweet:hover {
-  box-shadow: 10px 5px 5px;
-}
-
 .icons i:hover {
   color: goldenrod;
 }
 
-
+/* Display for mobile */
 @media only screen and (max-width: 1024px) {
   
   .author {

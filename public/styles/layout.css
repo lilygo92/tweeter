@@ -33,6 +33,7 @@ main {
   margin: 0 auto;
 }
 
+/* Display for desktop */
 @media only screen and (min-width: 1024px) {
   main {
     width: 40%
@@ -41,12 +42,5 @@ main {
   body {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  body .header {
-    height: 500px;
-    width: 35%;
-    margin: 100px;
-    margin-right: 0px;
   }
 }

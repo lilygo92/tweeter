@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(() => {
   const escape = function(str) {
     let div = document.createElement("div");
@@ -11,6 +5,7 @@ $(() => {
     return div.innerHTML;
   };
 
+  // Dynamically upload tweets into #tweet-container section of index.html
   const createTweetElement = function(tweet) {
     const $element =
     $(`<article class="tweet">
@@ -36,6 +31,7 @@ $(() => {
     return $element;
   };
 
+  // Run createTweetElement on every object in an array of objects
   const renderTweets = function(tweets) {
 
     for (const tweet of tweets) {
@@ -46,6 +42,8 @@ $(() => {
     return $('#tweets-container');
   };
   
+  // Use ajax to render tweets automatically on the page
+  // Empty container between rendering to avoid duplicating posts
   const fetchTweets = () => {
     $.ajax({
       method: 'GET',
@@ -56,14 +54,14 @@ $(() => {
     });
   };
 
-
   fetchTweets();
 
+  // Serialize user input in new tweet form
+  // Check that input has characters and is within the character limit (Add 5 because serialize includes the word "Text:" in front of the input value)
+  // If form submission fails, display error message, if submission succeeds hide error message
+  // Use ajax to automatically render tweets using fetchTweets, and reset the form and character count
   $("form").submit(function(event) {
-    console.log("Handler for .submit() called.");
     let input = ($(this).find('#tweet-text').serialize());
-
-    console.log(input.length);
 
     if (input.length <= 5) {
       event.preventDefault();
@@ -88,8 +86,7 @@ $(() => {
       url: 'tweets',
       data: input
     })
-      .then((newTweet) => {
-        console.log(newTweet);
+      .then(() => {
         this.reset();
         $(this).find("output").html(140);
         fetchTweets();
@@ -99,5 +96,4 @@ $(() => {
   });
 });
 
-// Test / driver code (temporary)
 

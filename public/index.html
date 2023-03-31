@@ -49,6 +49,7 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main>
+      <!-- Form for creating new tweets -->
       <section class="new-tweet">
         <div id="error">
           <i class="fa-sharp fa-solid fa-triangle-exclamation"></i><span class="error-text">Test Text But Longer</span><i class="fa-sharp fa-solid fa-triangle-exclamation"></i>
@@ -56,12 +57,13 @@
         <form method="POST" action="/tweets">
           <label for="tweet-text"><strong>What are you humming about?</strong></label>
           <textarea name="text" id="tweet-text" ></textarea>
-          <div>
+          <div id="bottom">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form> 
       </section>
+      <!-- Container for tweets (Dynamically filled using jQuery) -->
       <section id="tweets-container"></section>
     </main>
   </body>

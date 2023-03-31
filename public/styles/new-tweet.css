@@ -7,12 +7,12 @@
 .new-tweet label {
   padding-top: 80px;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 
 #tweet-text {
   height: 1.5em;
-  width: 50%;
+  width: 100%;
   background-color: transparent;
   outline: none;
   resize: none;
@@ -23,8 +23,8 @@
   margin-bottom: 10px;
 }
 
-.new-tweet form div {
-  width: 50%;
+.new-tweet #bottom {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,6 +46,8 @@ output {
 
 #error {
   margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 0px;
   border: 3px solid red;
   padding: 15px;
   color: red;
@@ -54,37 +56,3 @@ output {
   justify-content: space-evenly;
 }
 
-
-@media only screen and (min-width: 768px) {
-  .new-tweet label {
-    padding-top: 80px;
-    text-align: left;
-    width: 100%;
-  }
-  
-  #tweet-text {
-    height: 1.5em;
-    width: 100%;
-    background-color: transparent;
-    outline: none;
-    resize: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid black;
-    margin-bottom: 10px;
-  }
-  
-  .new-tweet form div {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: 'Bungee', cursive;
-  }
-  
-  #error {
-    margin-top: 50px;
-    margin-bottom: 0px;
-  }
-}
